@@ -1,96 +1,238 @@
 {
   "release": "R1.2",
   "source": "sample",
-  "fetched_at": "2026-07-06T09:00:00Z",
+  "fetched_at": "2026-05-11T09:00:00Z",
   "results": {
     "variant_a": {
       "wltc_consumption": {
-        "value": 15.9,
+        "value": 15.8,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
       },
-      "r179_c_factor": {
-        "value": 1.004,
+      "wltc_range": {
+        "value": 520,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
-      },
-      "pass_by_noise": {
-        "value": 67.4,
-        "verdict": "PASSED",
-        "report_id": null,
-        "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
-      },
-      "r177_power": {
-        "value": 211,
-        "verdict": "PASSED",
-        "report_id": null,
-        "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
-      }
-    },
-    "variant_b": {
-      "wltc_consumption": {
-        "value": 16.8,
-        "verdict": "PASSED",
-        "report_id": null,
-        "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
       },
       "r179_c_factor": {
         "value": 1.001,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
       },
       "pass_by_noise": {
-        "value": 68.3,
+        "value": 67.4,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "stationary_noise": {
+        "value": 70.9,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
       },
       "r177_power": {
-        "value": 249,
+        "value": 209.5,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "power_30min": {
+        "value": 94.9,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "mass_running_order": {
+        "value": 2107,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      }
+    },
+    "variant_b": {
+      "wltc_consumption": {
+        "value": 16.9,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "wltc_range": {
+        "value": 486,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "r179_c_factor": {
+        "value": 1.001,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "pass_by_noise": {
+        "value": 68.0,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "stationary_noise": {
+        "value": 71.5,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "r177_power": {
+        "value": 250.7,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "power_30min": {
+        "value": 109.5,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "mass_running_order": {
+        "value": 2179,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
       }
     },
     "variant_c": {
       "wltc_consumption": {
-        "value": 18.3,
+        "value": 18.2,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "wltc_range": {
+        "value": 450,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "r179_c_factor": {
+        "value": 1.001,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "pass_by_noise": {
+        "value": 68.6,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "stationary_noise": {
+        "value": 71.8,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "r177_power": {
+        "value": 300.4,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "power_30min": {
+        "value": 140.2,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "mass_running_order": {
+        "value": 2262,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      }
+    },
+    "variant_d": {
+      "wltc_consumption": {
+        "value": 19.5,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "wltc_range": {
+        "value": 413,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
       },
       "r179_c_factor": {
         "value": 1.0,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
       },
       "pass_by_noise": {
-        "value": 68.5,
+        "value": 68.7,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "stationary_noise": {
+        "value": 72.2,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
       },
       "r177_power": {
-        "value": 300,
+        "value": 299.7,
         "verdict": "PASSED",
         "report_id": null,
         "report_url": null,
-        "measured_at": "2026-07-06T08:00:00Z"
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "power_30min": {
+        "value": 139.9,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
+      },
+      "mass_running_order": {
+        "value": 2307,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-05-11T08:00:00Z"
       }
     }
   }

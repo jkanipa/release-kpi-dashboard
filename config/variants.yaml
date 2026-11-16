@@ -12,3 +12,6 @@ variants:
   - id: variant_c
     name: Variant C
     testguide_value: VAR_C
+  - id: variant_d
+    name: Variant D
+    testguide_value: VAR_D

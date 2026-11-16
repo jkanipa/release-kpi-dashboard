@@ -21,6 +21,18 @@ The Git repo is the record: each release's values are a committed JSON file, and
 | test.guide fetch | **Not verified against a real server.** Endpoint, auth and field names in `config/testguide.yaml` are placeholders |
 | KPI units, tolerances, limits | Placeholders to confirm with KPI owners |
 
+## Views
+
+| View | Shows |
+|---|---|
+| Release | Headline for one release, what got worse since the previous one, a worst-first "needs attention" list, and every KPI grouped by `group` with value, change and trend |
+| All releases | Status heatmap of every KPI and variant across all releases |
+| KPI detail | One chart per variant with baseline, tolerance band, deviation threshold and limit, plus the values table |
+| Compare | Two releases side by side, optionally only where the status changed |
+| Details | Every result as a filterable table with CSV download |
+
+The selected release, KPI and filters are part of the page address, so a copied link opens the same view. The site has no external dependencies and a print stylesheet for release reviews.
+
 ## Run it locally
 
 ```bash

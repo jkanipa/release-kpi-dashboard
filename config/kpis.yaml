@@ -1,5 +1,6 @@
 # KPI catalogue. Add a KPI by adding one entry here; no code changes needed.
 #
+# group: heading the KPI is listed under on the dashboard.
 # direction: lower_is_better | higher_is_better | target
 #   target = any drift away from the baseline is unwanted.
 # tolerance.mode: percent (relative to baseline) | absolute (in the KPI's unit)
@@ -12,10 +13,12 @@
 #
 # ALL units, tolerances, limits and source names below are PLACEHOLDERS.
 # Confirm them with the KPI owners before using the dashboard for decisions.
+# Entries marked "sample entry" were added only to show the layout at scale.
 
 kpis:
   - id: wltc_consumption
     name: WLTC consumption
+    group: Energy
     regulation: WLTP
     unit: kWh/100 km
     decimals: 1
@@ -23,8 +26,19 @@ kpis:
     tolerance: {mode: percent, warn: 1.0, fail: 2.0}
     source: {testcase: WLTC_Consumption, value_from: parameters, key: consumption_kwh_100km}
 
+  - id: wltc_range            # sample entry
+    name: WLTC range
+    group: Energy
+    regulation: WLTP
+    unit: km
+    decimals: 0
+    direction: higher_is_better
+    tolerance: {mode: percent, warn: 1.0, fail: 2.0}
+    source: {testcase: WLTC_Range, value_from: parameters, key: range_km}
+
   - id: r179_c_factor
     name: C-factor
+    group: UN R179
     regulation: UN R179
     unit: ""
     decimals: 3
@@ -34,6 +48,7 @@ kpis:
 
   - id: pass_by_noise
     name: Pass-by noise
+    group: Noise
     regulation: UN R51
     unit: dB(A)
     decimals: 1
@@ -42,11 +57,42 @@ kpis:
     limit: {max: 70.0}   # placeholder, NOT the legal limit
     source: {testcase: PassByNoise, value_from: parameters, key: lurban_dba}
 
+  - id: stationary_noise      # sample entry
+    name: Stationary noise
+    group: Noise
+    regulation: UN R51
+    unit: dB(A)
+    decimals: 1
+    direction: lower_is_better
+    tolerance: {mode: absolute, warn: 1.0, fail: 2.0}
+    source: {testcase: StationaryNoise, value_from: parameters, key: stationary_dba}
+
   - id: r177_power
     name: Power certification
+    group: Power
     regulation: UN R177
     unit: kW
-    decimals: 0
+    decimals: 1
     direction: target
     tolerance: {mode: percent, warn: 1.0, fail: 2.0}
     source: {testcase: R177_Power, value_from: parameters, key: net_power_kw}
+
+  - id: power_30min           # sample entry
+    name: 30-minute power
+    group: Power
+    regulation: UN R177
+    unit: kW
+    decimals: 1
+    direction: target
+    tolerance: {mode: percent, warn: 1.0, fail: 2.0}
+    source: {testcase: R177_Power30, value_from: parameters, key: power_30min_kw}
+
+  - id: mass_running_order    # sample entry
+    name: Mass in running order
+    group: Vehicle
+    regulation: Type approval
+    unit: kg
+    decimals: 0
+    direction: target
+    tolerance: {mode: percent, warn: 0.5, fail: 1.0}
+    source: {testcase: VehicleMass, value_from: parameters, key: mass_kg}

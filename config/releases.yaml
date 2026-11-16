@@ -3,8 +3,9 @@
 # frozen: true -> the fetch job never touches this release's snapshot again.
 
 releases:
-  - {id: R1.0, date: 2026-03-02, testguide_value: R1.0, frozen: true}
-  - {id: R1.1, date: 2026-05-04, testguide_value: R1.1, frozen: true}
-  - {id: R1.2, date: 2026-07-06, testguide_value: R1.2, frozen: true}
-  - {id: R2.0, date: 2026-09-07, testguide_value: R2.0, frozen: true}
-  - {id: R2.1, date: 2026-11-09, testguide_value: R2.1, frozen: false}
+  - {id: R1.0, date: 2026-01-12, testguide_value: R1.0, frozen: true}
+  - {id: R1.1, date: 2026-03-09, testguide_value: R1.1, frozen: true}
+  - {id: R1.2, date: 2026-05-11, testguide_value: R1.2, frozen: true}
+  - {id: R2.0, date: 2026-07-13, testguide_value: R2.0, frozen: true}
+  - {id: R2.1, date: 2026-09-14, testguide_value: R2.1, frozen: true}
+  - {id: R2.2, date: 2026-11-09, testguide_value: R2.2, frozen: false}

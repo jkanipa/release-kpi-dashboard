@@ -1,0 +1,4 @@
+# Changing the baseline or tolerances changes every verdict on the dashboard.
+# Replace the placeholder with the GitLab users or group who must approve.
+/config/baseline.yaml  @REPLACE-WITH-KPI-OWNERS
+/config/kpis.yaml      @REPLACE-WITH-KPI-OWNERS

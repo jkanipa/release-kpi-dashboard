@@ -1,0 +1,69 @@
+# Fetch KPI values from test.guide, check them, publish the dashboard on GitLab Pages.
+#
+# Project settings needed (Settings -> CI/CD -> Variables, all masked + protected):
+#   TESTGUIDE_URL    base URL of the test.guide server
+#   TESTGUIDE_TOKEN  test.guide API token of a read-only technical user
+#   PUSH_TOKEN       project access token (role Developer, scope write_repository)
+#                    so the fetch job can commit new snapshots
+# Also: Settings -> General -> Visibility -> Pages = "Only project members",
+#       a pipeline schedule (e.g. nightly) on the default branch,
+#       and a runner that can reach the test.guide server.
+
+stages: [fetch, test, deploy]
+
+default:
+  image: python:3.12
+  cache:
+    paths: [.cache/pip]
+  before_script:
+    - pip install --quiet --cache-dir .cache/pip -r requirements.txt
+
+fetch:
+  stage: fetch
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $CI_PIPELINE_SOURCE == "trigger"
+    - if: $CI_PIPELINE_SOURCE == "web" && $FETCH == "1"
+  script:
+    - python -m pipeline.fetch_testguide
+    - python -m pipeline.validate
+    - git config user.name "KPI dashboard bot"
+    - git config user.email "kpi-dashboard-bot@noreply.${CI_SERVER_HOST}"
+    - git add data/releases
+    - |
+      if git diff --cached --quiet; then
+        echo "No KPI changes."
+      else
+        git commit -m "Update KPI snapshots from test.guide"
+        git push -o ci.skip "https://kpi-bot:${PUSH_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" "HEAD:${CI_DEFAULT_BRANCH}"
+      fi
+  artifacts:
+    paths: [data/releases]
+
+test:
+  stage: test
+  script:
+    - python -m pytest -q
+    - python -m pipeline.validate
+
+# Merge requests: download the built site from the job's artifacts to review it.
+preview:
+  stage: deploy
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - python -m pipeline.build --out public
+  artifacts:
+    paths: [public]
+    expire_in: 1 week
+
+pages:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  script:
+    - python -m pipeline.build --out public
+  artifacts:
+    paths: [public]

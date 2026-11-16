@@ -1,0 +1,52 @@
+# KPI catalogue. Add a KPI by adding one entry here; no code changes needed.
+#
+# direction: lower_is_better | higher_is_better | target
+#   target = any drift away from the baseline is unwanted.
+# tolerance.mode: percent (relative to baseline) | absolute (in the KPI's unit)
+#   |delta| <= warn          -> within tolerance
+#   warn < |delta| <= fail   -> warning
+#   |delta| > fail           -> deviated
+#   beyond warn in the good direction -> improved
+# limit (optional): {max: x} or {min: x}; a value outside it is always "deviated".
+# source: where the value lives in test.guide (see config/testguide.yaml).
+#
+# ALL units, tolerances, limits and source names below are PLACEHOLDERS.
+# Confirm them with the KPI owners before using the dashboard for decisions.
+
+kpis:
+  - id: wltc_consumption
+    name: WLTC consumption
+    regulation: WLTP
+    unit: kWh/100 km
+    decimals: 1
+    direction: lower_is_better
+    tolerance: {mode: percent, warn: 1.0, fail: 2.0}
+    source: {testcase: WLTC_Consumption, value_from: parameters, key: consumption_kwh_100km}
+
+  - id: r179_c_factor
+    name: C-factor
+    regulation: UN R179
+    unit: ""
+    decimals: 3
+    direction: target
+    tolerance: {mode: percent, warn: 1.0, fail: 2.0}
+    source: {testcase: R179_C_Factor, value_from: parameters, key: c_factor}
+
+  - id: pass_by_noise
+    name: Pass-by noise
+    regulation: UN R51
+    unit: dB(A)
+    decimals: 1
+    direction: lower_is_better
+    tolerance: {mode: absolute, warn: 0.5, fail: 1.0}
+    limit: {max: 70.0}   # placeholder, NOT the legal limit
+    source: {testcase: PassByNoise, value_from: parameters, key: lurban_dba}
+
+  - id: r177_power
+    name: Power certification
+    regulation: UN R177
+    unit: kW
+    decimals: 0
+    direction: target
+    tolerance: {mode: percent, warn: 1.0, fail: 2.0}
+    source: {testcase: R177_Power, value_from: parameters, key: net_power_kw}

@@ -1,0 +1,97 @@
+{
+  "release": "R1.0",
+  "source": "sample",
+  "fetched_at": "2026-03-02T09:00:00Z",
+  "results": {
+    "variant_a": {
+      "wltc_consumption": {
+        "value": 15.8,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "r179_c_factor": {
+        "value": 1.0,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "pass_by_noise": {
+        "value": 67.4,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "r177_power": {
+        "value": 210,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      }
+    },
+    "variant_b": {
+      "wltc_consumption": {
+        "value": 16.9,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "r179_c_factor": {
+        "value": 1.0,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "pass_by_noise": {
+        "value": 67.9,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "r177_power": {
+        "value": 250,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      }
+    },
+    "variant_c": {
+      "wltc_consumption": {
+        "value": 18.2,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "r179_c_factor": {
+        "value": 1.0,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "pass_by_noise": {
+        "value": 68.6,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      },
+      "r177_power": {
+        "value": 300,
+        "verdict": "PASSED",
+        "report_id": null,
+        "report_url": null,
+        "measured_at": "2026-03-02T08:00:00Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Release KPI dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="title-row">
+        <h1>Release KPI dashboard</h1>
+        <p id="meta" class="meta"></p>
+      </div>
+      <nav id="tabs" class="tabs" aria-label="Views">
+        <a href="#overview" data-view="overview">Overview</a>
+        <a href="#trend" data-view="trend">Trend</a>
+        <a href="#compare" data-view="compare">Compare releases</a>
+        <a href="#details" data-view="details">Details</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <p id="sample-banner" class="banner" hidden>Showing illustrative sample data, not real test results.</p>
+    <div id="view" aria-live="polite"><p class="muted">Loading KPI data…</p></div>
+  </main>
+  <script src="vendor/chart.umd.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Reference release every later release is compared against.
+# Changing this file changes every verdict on the dashboard: review carefully.
+# `default` applies to all variants; add an entry under `variants` to override one.
+
+default: R1.0
+variants: {}
+#  variant_c: R1.1

@@ -1,0 +1,36 @@
+# How the fetch job talks to test.guide and reads one execution record.
+#
+# UNVERIFIED DEFAULTS. These were written without access to your test.guide
+# instance. Open "Help contents -> REST API" on your server and correct the
+# endpoint, auth and field names below before the first real fetch.
+# Server URL and token come from the environment: TESTGUIDE_URL, TESTGUIDE_TOKEN.
+
+api:
+  executions_path: /api/report/testCaseExecutions/filter
+  method: POST
+  auth: {in: query, name: authKey}     # in: query | header
+  project_id: 1
+  project_id_param: projectId
+  page_size: 500
+  page_param: offset                   # offset-style paging; set to null to disable
+  limit_param: limit
+  # Request body sent for each release; {release} is replaced by testguide_value.
+  filter_template:
+    attributes:
+      - {key: Release, values: ["{release}"]}
+
+# Dotted paths into ONE execution record of the response.
+response:
+  items_path: ""            # "" = response is the list itself; else e.g. "items"
+fields:
+  testcase_name: testCaseName
+  verdict: verdict
+  executed_at: executionTime
+  report_id: reportId
+  attributes: attributes    # mapping, or list of {key, value}
+  parameters: parameters
+  constants: constants
+
+release_key: Release        # attribute/constant holding the release name
+variant_key: Variant        # attribute/constant holding the variant name
+report_url_template: "{base_url}/report/{report_id}"

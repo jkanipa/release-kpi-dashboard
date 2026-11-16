@@ -1,0 +1,14 @@
+# Vehicle variants. testguide_value is what the variant attribute/constant
+# (config/testguide.yaml -> variant_key) contains for this variant.
+# Names below are placeholders.
+
+variants:
+  - id: variant_a
+    name: Variant A
+    testguide_value: VAR_A
+  - id: variant_b
+    name: Variant B
+    testguide_value: VAR_B
+  - id: variant_c
+    name: Variant C
+    testguide_value: VAR_C
